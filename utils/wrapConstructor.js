@@ -25,6 +25,7 @@ function wrapConstructor(Ctor, wrapper) {
         return wrapper.call.apply(wrapper, [this, Ctor].concat(args));
     }
     ConstructorWrapper.prototype = Ctor.prototype;
+    /*
     Object.defineProperty(ConstructorWrapper, 'name', {
         // These values should coincide with the default descriptor values for `name`.
         configurable: true,
@@ -32,6 +33,7 @@ function wrapConstructor(Ctor, wrapper) {
         value: Ctor.name,
         writable: false
     });
+    */
     return assignAll_1.assignAll(ConstructorWrapper, Ctor, PROPERTY_EXCLUDES);
 }
 exports.wrapConstructor = wrapConstructor;
