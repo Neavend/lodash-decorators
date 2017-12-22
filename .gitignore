@@ -1,13 +1,7 @@
 node_modules
 *.log
 
-/*.js
-/*.js.map
+/*.map
 /*.d.ts
-/applicators
-/factory
-/utils
-/test
 /buildDocs
-src/**/*.js
 src/**/*.map
